@@ -204,11 +204,11 @@ span {
     transition: 0.5s ease;
 }
 
-    .a-nav:hover {
-        background-color: #c6ad85;
-        text-shadow: 1px 1px 0 rgba(188,175,161,0.6), -1px -1px 1px rgba(255,250,240,0.67);
-        color: #7f492f;
-    }
+.a-nav:hover {
+    background-color: #c6ad85;
+    text-shadow: 1px 1px 0 rgba(188,175,161,0.6), -1px -1px 1px rgba(255,250,240,0.67);
+    color: #7f492f;
+}
 
 footer {
     background: #a88b6c;
