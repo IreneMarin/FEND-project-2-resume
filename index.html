@@ -51,7 +51,9 @@
         <div id="map-div" class="flower">
             <h2>Where Leonardo lived and worked</h2>
         </div>
-        <footer>
+        <footer id="lets-connect">            
+            <ul id="footerContacts" class="flex-box"></ul>
+            <br>
             &copy; Website made for academical purposes only. All the information and images used in the website have been taken from Wikipedia.org
         </footer>
     </div>
@@ -77,6 +79,9 @@
         if (document.getElementsByClassName('education-entry').length === 0) {
             document.getElementById('education').style.display = 'none';
             document.getElementById('education-nav').style.display = 'none';
+        }
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('letsConnect').style.display = 'none';
         }
         if (document.getElementById('map') === null) {
             document.getElementById('map-div').style.display = 'none';

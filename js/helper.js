@@ -3,6 +3,7 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1><hr/>';
+var HTMLfooterName = '<h2 class="center-text">%data%</h2>'
 
 // Since I am doing the "resume" like a kind of biography of Da Vinci, I changed the contacts variables:
 var HTMLheaderRole = '<li class="flex-item"><span class="orange-text">%data%</span></li>';
@@ -19,7 +20,7 @@ var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%&nbsp;';
-var HTMLworkTitle = '  ܀܀ &nbsp;%data%</a>';
+var HTMLworkTitle = '&nbsp;%data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%&nbsp;&nbsp;</div>';
 var HTMLworkLocation = '<div class="location-text">⚜&nbsp;&nbsp;%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
@@ -32,7 +33,7 @@ var HTMLprojectImage = '<img src="%data%" alt="%alt%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = '&nbsp;܀܀ %data%</a>';
+var HTMLschoolDegree = '&nbsp;%data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%&nbsp;&nbsp;</div>';
 var HTMLschoolLocation = '<div class="location-text">⚜&nbsp;&nbsp;%data%</div>';
 var HTMLschoolMajor = '<p><br>%data%</p>';

@@ -19,32 +19,39 @@ var bio = {
 };
 
 // Display the function with the bio info
-function displayBio() {
+bio.display = function () {
 
     // Prepend the name in the website
     $('#header').prepend(HTMLheaderName.replace('%data%', bio.name));
+    $('#lets-connect').prepend(HTMLfooterName.replace('%data%', bio.name));
+
+    // We create all the variables that we append together
+    var $topContacts = $('#topContacts');
+    var $footerContacts = $('#footerContacts');
+    var formattedHTMLheaderRole = HTMLheaderRole.replace('%data%', bio.role);
+    var formattedHTMLbirthdate = HTMLbirthdate.replace('%data%', bio.birth.date);
+    var formattedHTMLbirthplace = HTMLbirthplace.replace('%data%', bio.birth.location);
+    var formattedHTMLdeaddate = HTMLdeaddate.replace('%data%', bio.death.date);
+    var formattedHTMLdeadplace = HTMLdeadplace.replace('%data%', bio.death.location);
 
     // Append the role, birth and death information at the header of the website
-    $('#topContacts').append(HTMLheaderRole.replace('%data%', bio.role));
-    $('#topContacts').append(HTMLbirthdate.replace('%data%', bio.birth.date));
-    $('#topContacts').append(HTMLbirthplace.replace('%data%', bio.birth.location));
-    $('#topContacts').append(HTMLdeaddate.replace('%data%', bio.death.date));
-    $('#topContacts').append(HTMLdeadplace.replace('%data%', bio.death.location));
+    $topContacts.append(formattedHTMLheaderRole, formattedHTMLbirthdate, formattedHTMLbirthplace, formattedHTMLdeaddate, formattedHTMLdeadplace);
+    $footerContacts.append(formattedHTMLheaderRole, formattedHTMLbirthdate, formattedHTMLbirthplace, formattedHTMLdeaddate, formattedHTMLdeadplace);
 
     // Append the image and the welcome message
     $('#header').append(HTMLbioPic.replace('%data%', bio.bioPic).replace('%alt%', bio.name));
     $('#header').append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage));
 
-    if (bio.skills.length > 0) {
+    if (bio.skills.length) {
         var len = bio.skills.length;
         // Append all the skills, and the skills title
         $('#header').append(HTMLskillsStart);
         for (var skill = 0; skill < len; skill++) {
-            $('#skills').append(HTMLskills.replace('%data%', '܀܀ ' + bio.skills[skill]));
+            $('#skills').append(HTMLskills.replace('%data%', ' ' + bio.skills[skill]));
         }
     }
-}
-displayBio();
+};
+bio.display();
 
 // Create the object 'education'
 var education = {
@@ -61,30 +68,35 @@ var education = {
 };
 
 // Display the function with the education info
-function displayEducation() {
-    for (var school in education.schools) {
+education.display = function () {
+    var lengthEducation = education.schools.length;
+    for (var school = 0; school < lengthEducation; school++) {
 
         // We loop throught all the schools and create a new div for each school
         $('#education').append(HTMLschoolStart);
 
+        // We create all the variables that we append together
+        var $lastEducationEntry = $('.education-entry:last');
+        var formattedHTMLschoolName = HTMLschoolName.replace('%data%', education.schools[school].name) + HTMLschoolDegree.replace('%data%', education.schools[school].degree);
+        var formattedHTMLschoolDates = HTMLschoolDates.replace('%data%', education.schools[school].dates);
+        var formattedHTMLschoolLocation = HTMLschoolLocation.replace('%data%', education.schools[school].location);
+        
         // Append the info that is not an array
-        $('.education-entry:last').append(HTMLschoolName.replace('%data%', education.schools[school].name) + HTMLschoolDegree.replace('%data%', education.schools[school].degree));
-        $('.education-entry:last').append(HTMLschoolDates.replace('%data%', education.schools[school].dates));
-        $('.education-entry:last').append(HTMLschoolLocation.replace('%data%', education.schools[school].location));
-
+        $lastEducationEntry.append(formattedHTMLschoolName, formattedHTMLschoolDates, formattedHTMLschoolLocation);
+        
         // Append the info from the 'majors' array, throught a loop
         if (education.schools[school].majors.length > 0) {
             var len = education.schools[school].majors.length;
             for (var major = 0; major < len; major++) {
-                $('.education-entry:last').append(HTMLschoolMajor.replace('%data%', education.schools[school].majors[major]));
+                $lastEducationEntry.append(HTMLschoolMajor.replace('%data%', education.schools[school].majors[major]));
             }
         }
 
         // Append the URL in the <a href> from the school name. Also add the target=_blank property to the link.
         $('.education-entry:last a').attr('href', education.schools[school].url).attr('target', '_blank');
     }
-}
-displayEducation();
+};
+education.display();
 
 // Create the object 'work'
 var work = {
@@ -173,32 +185,38 @@ var work = {
 };
 
 // Display the function with the work info
-function displayWork() {
-    for (var job in work.jobs) {
+work.display = function () {
+    var lengthWork = work.jobs.length;
+    for (var job = 0; job < lengthWork; job++) {
 
         // We create a new div for each work job
         $('#workExperience').append(HTMLworkStart);
 
+        // We create all the variables that we append together
+        var $lastWorkEntry = $('.work-entry:last');
+        var formattedHTMLworkEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer) + HTMLworkTitle.replace('%data%', work.jobs[job].title);
+        var formattedHTMLworkLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
+        var formattedHTMLworkDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
+
         // We concat employer and title
-        $('.work-entry:last').append(HTMLworkEmployer.replace('%data%', work.jobs[job].employer) + HTMLworkTitle.replace('%data%', work.jobs[job].title));
+        $lastWorkEntry.append(formattedHTMLworkEmployer);
 
         // We append the dates information throught a loop, since it is an array. We have the 'if' to put it online only if there is something in it.
         if (work.jobs[job].dates.length > 0) {
             var len = work.jobs[job].dates.length;
             for (var date = 0; date < len; date++) {
-                $('.work-entry:last').append(HTMLworkDates.replace('%data%', work.jobs[job].dates[date]));
+                $lastWorkEntry.append(HTMLworkDates.replace('%data%', work.jobs[job].dates[date]));
             }
         }
 
         // We append the location and description
-        $('.work-entry:last').append(HTMLworkLocation.replace('%data%', work.jobs[job].location));
-        $('.work-entry:last').append(HTMLworkDescription.replace('%data%', work.jobs[job].description));
-
+        $lastWorkEntry.append(formattedHTMLworkLocation, formattedHTMLworkDescription);
+        
         // Append the URL in the <a href> from the work name. Also add the target=_blank property to the link.
         $('.work-entry:last a').attr('href', work.jobs[job].url).attr('target', '_blank');
     }
-}
-displayWork();
+};
+work.display();
 
 // Create the object 'projects'
 var projects = {
@@ -249,30 +267,35 @@ var projects = {
 };
 
 // Display the function with the projects
-function displayProjects() {
-    for (var project in projects.project) {
+projects.display = function () {
+    var lengthProjects = projects.project.length;
+    for (var project = 0; project < lengthProjects; project++) {
 
         // We create a new div for each project (painting or invention)
         $('#projects').append(HTMLprojectStart);
 
+        // We create all the variables that we append together
+        var $lastProjectEntry = $('.project-entry:last');
+        var formattedHTMLprojectTitle = HTMLprojectTitle.replace('%data%', projects.project[project].title);
+        var formattedHTMLprojectDates = HTMLprojectDates.replace('%data%', projects.project[project].dates);
+        var formattedHTMLprojectDescription = HTMLprojectDescription.replace('%data%', projects.project[project].description);
+
         // We append the title, dates and description
-        $('.project-entry:last').append(HTMLprojectTitle.replace('%data%', projects.project[project].title));
-        $('.project-entry:last').append(HTMLprojectDates.replace('%data%', projects.project[project].dates));
-        $('.project-entry:last').append(HTMLprojectDescription.replace('%data%', projects.project[project].description));
+        $lastProjectEntry.append(formattedHTMLprojectTitle, formattedHTMLprojectDates, formattedHTMLprojectDescription);
 
         // We append the project imatges throught a loop, since it is an array. We have the 'if' to put it online only if there is something in it.
         if (projects.project[project].images.length > 0) {
             var len = projects.project[project].images.length;
             for (var image = 0; image < len; image++) {
-                $('.project-entry:last').append(HTMLprojectImage.replace('%data%', projects.project[project].images[image]).replace('%alt%', projects.project[project].title));
+                $lastProjectEntry.append(HTMLprojectImage.replace('%data%', projects.project[project].images[image]).replace('%alt%', projects.project[project].title));
             }
         }
 
         // Append the URL in the <a href> from the project name. Also add the target=_blank property to the link.
         $('.project-entry:last a').attr('href', projects.project[project].url).attr('target', '_blank');
     }
-}
-displayProjects();
+};
+projects.display();
 
 // Maps!
 $('#map-div').append(googleMap);

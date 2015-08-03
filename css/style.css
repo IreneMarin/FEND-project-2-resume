@@ -163,10 +163,6 @@ span {
     padding: 5px;
 }
 
-#lets-connect {
-    text-align: center;
-}
-
 /* Navigation */
 .nav {
     padding: 0 5%;
@@ -215,11 +211,16 @@ span {
     }
 
 footer {
-    background: #7f492f;
+    background: #a88b6c;
     padding: 20px 5%;
     color: #fffaf0;
-    font-size: 14px;
-    text-align: right;
+    font-size: 13px;
+    text-align: center;
+}
+
+footer .orange-text,
+footer .white-text {
+    font-size: 16px;
 }
 
 /* Styles for the windows that open in the Google Maps */
