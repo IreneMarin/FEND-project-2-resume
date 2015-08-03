@@ -1,0 +1,278 @@
+body,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+    font-family: "Quattrocento", sans-serif;
+}
+
+.clear-fix {
+    overflow: auto;
+}
+
+.education-entry,
+.work-entry,
+.project-entry {
+    margin: 0 5% 20px;
+    padding: 20px;
+    line-height: 24px;
+    background: #fffaf0;
+}
+
+#education,
+#workExperience,
+#projects,
+#map-div {
+    padding: 40px 0 60px;
+}
+
+h1 {
+    font-size: 40px;
+    color: #7f492f;
+    line-height: 48px;
+    display: inline;
+    font-family: "Meddon", cursive;
+    padding-right: 30px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: #fffaf0;
+    line-height: 35px;
+    padding: 30px 5%;
+    font-family: "Meddon", cursive;
+    text-shadow: 1px 1px 0 rgba(159,157,109,0.6), -1px -1px 1px rgba(0,0,0,0.67);
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 22px;
+    color: #7f492f;
+    padding: 30px 5% 10px;
+}
+
+.date-text {
+    font-size: 16px;
+    color: #999;
+    float: left;
+}
+
+.location-text {
+    font-size: 16px;
+    color: #999;
+    float: left;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+a {
+    color: #7f492f;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    font-size: 18px;
+}
+
+.welcome-message {
+    font-size: 16px;
+    color: #f3f3f3;
+    line-height: 28px;
+}
+
+#skills-h3 {
+    display: none;
+}
+
+.orange {
+    background-color: #7f492f;
+}
+
+.orange-text {
+    color: #7f492f;
+    font-weight: bold;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.gray {
+    background-color: #a88b6c;
+    padding-bottom: 10px;
+    clear: both;
+}
+
+.flower {
+    background: url(../images/pattern1.jpg);
+    padding-bottom: 10px;
+    clear: both;
+}
+
+#header {
+    background-color: #c6ad85;
+    background: url(../images/background1.jpg);
+}
+
+.flex-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 0 30px 0;
+}
+
+.skills {
+    background: url(../images/firma.svg) no-repeat right bottom;
+    min-height: 130px;
+}
+
+.center-content {
+    padding: 2.5% 5%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.biopic {
+    float: left;
+    padding: 0;
+    display: none;
+    margin-right: 30px;
+}
+
+img {
+    padding: 10px 20px 0 0;
+    max-height: 300px;
+}
+
+span {
+    padding: 5px;
+}
+
+#lets-connect {
+    text-align: center;
+}
+
+/* Navigation */
+.nav {
+    padding: 0 5%;
+    background-color: #7f492f;
+    min-height: 61px;
+    position: -webkit-sticky;
+    z-index: 1;
+}
+
+/* This is necessary to create the sticky navigation that doesn't disapear */
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}
+
+.li-nav {
+    float: left;
+}
+
+.a-nav {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    font-size: 20px;
+    color: #c6ad85;
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    white-space: pre;
+    text-shadow: 1px 1px 0 rgba(140,140,140,0.6), -1px -1px 1px rgba(0,0,0,0.67);
+    margin-top: 0;
+    padding: 17px 30px;
+    font-weight: normal;
+    transition: 0.5s ease;
+}
+
+    .a-nav:hover {
+        background-color: #c6ad85;
+        text-shadow: 1px 1px 0 rgba(188,175,161,0.6), -1px -1px 1px rgba(255,250,240,0.67);
+        color: #7f492f;
+    }
+
+footer {
+    background: #7f492f;
+    padding: 20px 5%;
+    color: #fffaf0;
+    font-size: 14px;
+    text-align: right;
+}
+
+/* Styles for the windows that open in the Google Maps */
+#content {
+    padding: 10px;
+}
+
+.firstHeading {
+    font-size: 26px;
+}
+
+/* Media queries to handle various device widths */
+@media only screen and (max-width: 1024px) {
+    #lets-connect {
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .biopic {
+        width: 175px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #lets-connect {
+        margin-top: 10%;
+    }
+
+    .biopic {
+        width: 150px;
+    }
+
+    .welcome-message {
+        display: none;
+    }
+}
+
+#map {
+    display: block;
+    height: 100%;
+    margin: 0 5%;
+}
+
+#map-div {
+    height: 600px;
+    width: 100%;
+    padding-bottom: 10%;
+}
+
+@media only screen and (min-width: 750px) {
+    #skills-h3,
+    .biopic {
+        display: block;
+    }
+}

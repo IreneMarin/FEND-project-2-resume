@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Project 2: Online resume</title>
+    <link href="http://fonts.googleapis.com/css?family=Meddon|Quattrocento:400,700" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/jQuery.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+    <!-- I have changed the HTML layer a little bit. I have added the navigation menu, and the Let's connect part has been deleted,
+        since I didn't need to put personal info there, instead I put a footer -->
+</head>
+<body>
+    <div id="main">
+        <div id="header" class="center-content clear-fix">
+            <ul id="topContacts" class="flex-box"></ul>
+        </div>
+        <div style="clear: both;"></div>
+        <nav id="nav" class="nav">
+            <ul>
+                <li id="personal-nav" class="li-nav">
+                    <a href="#main" class="a-nav">⚜ Personal life</a>
+                </li>
+                <li id="education-nav" class="li-nav">
+                    <a href="#education" class="a-nav">⚜ Education</a>
+                </li>
+                <li id="workExperience-nav" class="li-nav">
+                    <a href="#workExperience" class="a-nav">⚜ Professional life</a>
+                </li>
+                <li id="projects-nav" class="li-nav">
+                    <a href="#projects" class="a-nav">⚜ Paintings and inventions</a>
+                </li>
+                <li id="map-div-nav" class="li-nav">
+                    <a href="#map-div" class="a-nav">⚜ Places</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="education" class="gray">
+            <h2>Education</h2>
+        </div>
+        <div id="workExperience" class="flower">
+            <h2>Professional life</h2>
+        </div>
+        <div id="projects" class="gray">
+            <h2>Paintings and inventions</h2>
+        </div>
+        <div id="map-div" class="flower">
+            <h2>Where Leonardo lived and worked</h2>
+        </div>
+        <footer>
+            &copy; Website made for academical purposes only. All the information and images used in the website have been taken from Wikipedia.org
+        </footer>
+    </div>
+    <script src="js/resumeBuilder.js"></script>
+    <!-- We check if there is any information in the tag elements (that is, if the functions for each part have been displayed).
+        If there isn't, we hide the div, and also the navigation menu. -->
+    <script>
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('topContacts').style.display = 'none';
+        }
+        if (document.getElementsByTagName('h1').length === 0) {
+            document.getElementById('header').style.display = 'none';
+            document.getElementById('personal-nav').style.display = 'none';
+        }
+        if (document.getElementsByClassName('work-entry').length === 0) {
+            document.getElementById('workExperience').style.display = 'none';
+            document.getElementById('workExperience-nav').style.display = 'none';
+        }
+        if (document.getElementsByClassName('project-entry').length === 0) {
+            document.getElementById('projects').style.display = 'none';
+            document.getElementById('projects-nav').style.display = 'none';
+        }
+        if (document.getElementsByClassName('education-entry').length === 0) {
+            document.getElementById('education').style.display = 'none';
+            document.getElementById('education-nav').style.display = 'none';
+        }
+        if (document.getElementById('map') === null) {
+            document.getElementById('map-div').style.display = 'none';
+            document.getElementById('map-div-nav').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
