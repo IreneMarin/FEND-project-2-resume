@@ -7,4 +7,4 @@ we have to write the JavaScript that powers our own interactive resume. We'll bu
 
 <a href="https://www.udacity.com" target="_blank">Link to Udacity's course</a>
 
-<a href="http://irene.marin.cat/udacity/project2/index.html">Link to the project's result</a>
+<a href="http://irene.marin.cat/udacity/project2/index.html" target="_blank">Link to the project's result</a>
