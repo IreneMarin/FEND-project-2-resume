@@ -40,10 +40,7 @@ var HTMLschoolMajor = '<p><br>%data%</p>';
 
 var googleMap = '<div id="map"></div>';
 
-/*
-The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
-Part 5 for project 2.
-*/
+// The next lines about clicks are for the Collecting Click Locations quiz in Lesson 2. Part 5 for project 2.
 clickLocations = [];
 function logClicks(x, y) {
     clickLocations.push(
@@ -100,30 +97,6 @@ function initializeMap() {
         return locations;
     }
 
-
-    function descriptionFinder(location) {
-
-        var description;
-
-        // iterates through school locations and appends each location to the locations array
-        var lengthSchools = education.schools.length;
-        for (var school = 0; school < lengthSchools; school++) {
-            if (location === education.schools[school].location) {
-                description = education.schools[school].description;
-            }
-        }
-
-        // iterates through work locations and appends each location to the locations array
-        var lengthJobs = work.jobs.length;
-        for (var job = 0; job < lengthJobs; job++) {
-            if (location === work.jobs[job].location) {
-                description = work.jobs[job].description;
-            }
-        }
-
-        return description;
-    }
-
     /*
     createMapMarker(placeData) reads Google Places search results to create map pins.
     placeData is the object returned from search results containing information about a single location.
@@ -134,7 +107,6 @@ function initializeMap() {
         var lat = placeData.geometry.location.lat();  // latitude from the place service
         var lon = placeData.geometry.location.lng();  // longitude from the place service
         var name = placeData.name;   // name of the place from the place service
-        var description = descriptionFinder(name);
         var bounds = window.mapBounds;            // current boundaries of the map window
 
         // marker is an object with additional data about the pin for a single location
