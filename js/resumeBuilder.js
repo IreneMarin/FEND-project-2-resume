@@ -47,7 +47,7 @@ bio.display = function () {
         // Append all the skills, and the skills title
         $('#header').append(HTMLskillsStart);
         for (var skill = 0; skill < len; skill++) {
-            $('#skills').append(HTMLskills.replace('%data%', ' ' + bio.skills[skill]));
+            $('#skills').append(HTMLskills.replace('%data%', ' ❖ ' + bio.skills[skill]));
         }
     }
 };
