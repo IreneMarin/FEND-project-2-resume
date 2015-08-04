@@ -20,7 +20,7 @@ var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%&nbsp;';
-var HTMLworkTitle = '&nbsp;%data%</a>';
+var HTMLworkTitle = '❖&nbsp;%data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%&nbsp;&nbsp;</div>';
 var HTMLworkLocation = '<div class="location-text">⚜&nbsp;&nbsp;%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
@@ -32,8 +32,8 @@ var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%" alt="%alt%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = '&nbsp;%data%</a>';
+var HTMLschoolName = '<a href="#">%data%&nbsp;';
+var HTMLschoolDegree = '❖&nbsp;%data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%&nbsp;&nbsp;</div>';
 var HTMLschoolLocation = '<div class="location-text">⚜&nbsp;&nbsp;%data%</div>';
 var HTMLschoolMajor = '<p><br>%data%</p>';
