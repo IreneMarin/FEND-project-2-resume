@@ -13,7 +13,8 @@ built and personalized a resume with JavaScript and jQuery to power interactivel
 3. Review your work against the Project Rubric (on the next page).
 4. When you are satisfied with your project, submit it according to the Submission Instructions on the next page.
 
-By the end, your resume will look something like this
+By the end, your resume will look something like this:
+
 ![](http://i.imgur.com/pWU1Xbl.png)
 
 And your repository will include the following files:
