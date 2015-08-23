@@ -1,18 +1,19 @@
-# Online Resume project
+## Online Resume project
 
 Second project from the Front-End Web Developer Nanodegree in <a href="https://www.udacity.com" target="_blank">Udacity</a>:
 <br>
 built and personalized a resume with JavaScript and jQuery to power interactively it.
 
-## Udacity's instructions:
+----------------------
+
+### Udacity's instructions:
 
 1. Go to the [Javascript Basics course](https://www.udacity.com/course/ud804) and select "View Course Materials."
 2. Go through the videos and assignments in this course to learn the JavaScript necessary to build your resume.
 3. Review your work against the Project Rubric (on the next page).
 4. When you are satisfied with your project, submit it according to the Submission Instructions on the next page.
 
-### By the end:
-Your resume will look something like this
+By the end, your resume will look something like this
 ![](http://i.imgur.com/pWU1Xbl.png)
 
 And your repository will include the following files:
