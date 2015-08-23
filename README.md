@@ -1,4 +1,4 @@
-# project-2-resume
+# Online Resume project
 
 Second project from the Front-End Web Developer Nanodegree in <a href="https://www.udacity.com" target="_blank">Udacity</a>:
 <br>
