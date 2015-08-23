@@ -8,6 +8,8 @@ built and personalized a resume with JavaScript and jQuery to power interactivel
 
 ### Udacity's instructions:
 
+In this project you will write the JavaScript that powers your own interactive resume.
+
 1. Go to the [Javascript Basics course](https://www.udacity.com/course/ud804) and select "View Course Materials."
 2. Go through the videos and assignments in this course to learn the JavaScript necessary to build your resume.
 3. Review your work against the Project Rubric (on the next page).
