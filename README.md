@@ -6,7 +6,7 @@ Second project from the Front-End Web Developer Nanodegree in <a href="https://w
 <br>
 built and personalized a resume with JavaScript and jQuery to power interactively it.
 
-## How do I complete this project?
+## Udacity's instructions:
 
 1. Go to the [Javascript Basics course](https://www.udacity.com/course/ud804) and select "View Course Materials."
 2. Go through the videos and assignments in this course to learn the JavaScript necessary to build your resume.
