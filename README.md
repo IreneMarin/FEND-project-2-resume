@@ -6,7 +6,7 @@ built and personalized a resume with JavaScript and jQuery to power interactivel
 
 ----------------------
 
-### Udacity's instructions:
+### Udacity's instructions
 
 In this project you will write the JavaScript that powers your own interactive resume.
 
