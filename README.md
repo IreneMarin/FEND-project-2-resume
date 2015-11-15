@@ -31,3 +31,9 @@ And your repository will include the following files:
 * **README.md**: 
 The GitHub readme file.
 * and some images in the images directory.
+
+---------------------
+
+### License
+
+The project is licensed under the [MIT license](license.txt).
